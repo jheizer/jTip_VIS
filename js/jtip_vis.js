@@ -13,11 +13,17 @@
 $(document).ready(JT_init);
 
 function JT_init(){
-	       $("a.jTip")
+	   	$("a.jTip")
 		   .hover(function(){
 			JT_show(this.getAttribute("helpwidth"),this.id,this.name,this.getAttribute("helptext"))
 		},function(){$('#JT').remove()})
            .click(function(){return false});	   
+
+	       $("img.jTip")
+		   .hover(function(){
+			JT_show(this.getAttribute("helpwidth"),this.id,this.name,this.getAttribute("helptext"))
+		},function(){$('#JT').remove()})
+           .click(function(){return false});	
 }
 
 function JT_show(wid,linkId,title,helptext){
